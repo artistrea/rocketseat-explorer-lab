@@ -1,6 +1,4 @@
 // card: {name, number, holder, expirationDate, securityCode}
-import fs from "fs";
-
 class Card {
   cardNumberRegex = {
     visa: /^4\d{15}$/,
@@ -13,9 +11,7 @@ class Card {
     default: ["#2F2F2F", "#2F2F2F"],
   };
 
-  create = (card) => {
-    fs.write(__dirname + "/storage/cards.json", card);
-  };
+  create = (card) => {};
   remove = ({ cardName, cardNumber }) => {};
 }
 

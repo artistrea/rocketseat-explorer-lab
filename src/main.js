@@ -73,3 +73,13 @@ securityCodeInput.oninput = (e) => {
   const code = e.target.value;
   setSecurityCode(code);
 };
+
+const form = document.querySelector("form");
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+  console.log(data);
+  card.create(data);
+};
