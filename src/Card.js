@@ -8,7 +8,7 @@ class Card {
   cardTypeColors = {
     mastercard: ["#C69347", "#DF6F29"],
     visa: ["#436D99", "#2D57F2"],
-    default: ["#2F2F2F", "#2F2F2F"],
+    default: ["black", "gray"],
   };
 
   create = (card) => {};
