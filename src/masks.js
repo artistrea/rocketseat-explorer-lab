@@ -1,5 +1,5 @@
 import IMask from "imask";
-import { cardNumberRegex } from "./storage/cards";
+import { card } from "./Card";
 
 const securityCodeInput = document.querySelector("#security-code");
 const expirationDateInput = document.querySelector("#expiration-date");
@@ -30,10 +30,10 @@ IMask(expirationDateInput, expirationDatePattern);
 const cardHolderPattern = { mask: /^[a-zA-Z ]+$/ };
 IMask(cardHolderInput, cardHolderPattern);
 
-const cardNumberMasks = Object.keys(cardNumberRegex)
+const cardNumberMasks = Object.keys(card.cardNumberRegex)
   .map((cardType) => ({
     mask: "0000 0000 0000 0000",
-    regex: cardNumberRegex[cardType],
+    regex: card.cardNumberRegex[cardType],
     cardType,
   }))
   .concat({ mask: "0000 0000 0000 0000", cardType: "default" });
