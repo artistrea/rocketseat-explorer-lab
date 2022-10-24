@@ -11,7 +11,15 @@ class Card {
     default: ["black", "gray"],
   };
 
-  create = (card) => {};
+  create = (card) => {
+    return fetch("/api/card/create", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(card),
+    });
+  };
   remove = ({ cardName, cardNumber }) => {};
 }
 

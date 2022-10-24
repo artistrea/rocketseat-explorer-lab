@@ -1,5 +1,4 @@
 import "./css/index.css";
-import "./masks.js";
 import {
   cardNumberInput,
   cardHolderInput,
@@ -80,6 +79,21 @@ form.onsubmit = (e) => {
   e.preventDefault();
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-  console.log(data);
-  card.create(data);
+
+  card.create(data).then(async (res) => {
+    const data = await res.json();
+    if (res.status === 200) {
+      alert("Cartão cadastrado com sucesso!");
+    } else {
+      alert("Erro ao cadastrar cartão! " + JSON.stringify(data));
+    }
+  });
 };
+
+const myCardsButton = document.querySelector("#my-cards-button");
+const myCardsModal = document.querySelector("#my-cards-modal");
+
+myCardsButton.addEventListener("click", () => {
+  console.log(myCardsModal);
+  myCardsModal.showModal();
+});
