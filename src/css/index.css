@@ -49,6 +49,28 @@
   #app form {
     grid-area: C;
   }
+  footer br {
+    display: none;
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 3rem;
+  border-radius: 0 1rem 0 0;
+  background: #121212;
+  text-align: center;
+  font-size: 1.4rem;
+  box-shadow: -1.5rem -0.5rem 0.9rem 0.8rem rgba(100, 100, 100, 0.2),
+    -3rem -2rem 0.9rem 0.8rem rgba(200, 200, 200, 0.1),
+    -5rem -3rem 0.9rem 0.8rem rgba(200, 200, 200, 0.1);
+}
+
+footer a {
+  font-size: 1.5rem;
+  color: rgb(91, 61, 181);
 }
 
 #app {

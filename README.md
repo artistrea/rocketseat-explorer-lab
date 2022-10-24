@@ -1,4 +1,4 @@
-Obs: O evento ensina somente o clientside, modularização de js, app node e backend feitos na marra por mim. (Primeira vez usando JS puro pra manipular DOM, e primeiro backend em node)
+Obs: O evento ensina somente o clientside, modularização de js, app node e backend feitos na marra por mim. (Primeira vez usando JS puro pra manipular DOM, e primeiro backend em node). Deploy feito no [railway](https://my-rocketseat-explorer-lab-production.up.railway.app/)
 
 <h1 align="center"> Explorer Lab #01 </h1>
 
