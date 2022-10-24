@@ -1,0 +1,78 @@
+.modal-wrapper {
+  pointer-events: none;
+  z-index: 999;
+  max-width: 100vw;
+
+  position: fixed;
+  inset: 0;
+  display: grid;
+  align-items: center;
+}
+
+#my-cards-modal {
+  width: min(90%, 1500px);
+  border: none;
+  pointer-events: auto;
+
+  background: #0b0b0c;
+  border-radius: 1rem;
+  box-shadow: rgba(80, 80, 80, 0.25) 0px 54px 55px,
+    rgba(80, 80, 80, 0.12) 0px -12px 30px, rgba(80, 80, 80, 0.12) 0px 4px 6px,
+    rgba(80, 80, 80, 0.17) 0px 12px 13px, rgba(80, 80, 80, 0.09) 0px -3px 5px;
+  color: white;
+  position: absolute;
+  padding: 2rem;
+  margin-inline: auto;
+  height: 80vh;
+}
+
+#my-cards-modal[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+#my-cards-modal h2 {
+  margin-bottom: 5rem;
+}
+
+#my-cards-modal::before {
+  content: "";
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#my-cards-modal-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#my-cards-modal-open-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.my-cards-modal__content {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.my-cards-modal__content > * {
+  box-shadow: rgba(70, 70, 70, 0.1) 0px 54px 55px,
+    rgba(70, 70, 70, 0.12) 0px -12px 10px, rgba(70, 70, 70, 0.12) 0px 4px 6px,
+    rgba(70, 70, 70, 0.17) 0px 12px 13px, rgba(70, 70, 70, 0.09) 0px -3px 5px;
+}

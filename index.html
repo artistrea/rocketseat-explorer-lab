@@ -158,7 +158,25 @@
         <button>ADICIONAR CARTÃO</button>
       </form>
     </div>
+    <button
+      id="my-cards-modal-open-button"
+      class="my-cards-modal-toggle-button"
+    >
+      MEUS CARTÕES
+    </button>
 
-    <script type="module" src="/src/main.js"></script>
+    <div class="modal-wrapper">
+      <dialog id="my-cards-modal">
+        <h2>Meus cartões</h2>
+        <span
+          id="my-cards-modal-close-button"
+          class="my-cards-modal-toggle-button"
+          >&#x2715;</span
+        >
+        <div class="my-cards-modal__content"></div>
+      </dialog>
+    </div>
+
+    <script type="module" open src="/src/main.js"></script>
   </body>
 </html>

@@ -1,11 +1,12 @@
 import "./css/index.css";
+import "./cards-modal.js";
 import {
   cardNumberInput,
   cardHolderInput,
   expirationDateInput,
   securityCodeInput,
 } from "./masks.js";
-import { card } from "./Card";
+import { card, cardTypes } from "./Card";
 
 const ccBgColor1 = document.querySelector(
   ".cc-bg > svg > g g:nth-child(1) path"
@@ -16,8 +17,6 @@ const ccBgColor2 = document.querySelector(
 const ccLogo = document.querySelector(".cc-logo span:nth-child(2) img");
 
 function setCardType(number) {
-  const cardTypes = Object.keys(card.cardNumberRegex);
-
   const cardType =
     cardTypes.find((cardType) => {
       const regex = card.cardNumberRegex[cardType];
@@ -89,11 +88,3 @@ form.onsubmit = (e) => {
     }
   });
 };
-
-const myCardsButton = document.querySelector("#my-cards-button");
-const myCardsModal = document.querySelector("#my-cards-modal");
-
-myCardsButton.addEventListener("click", () => {
-  console.log(myCardsModal);
-  myCardsModal.showModal();
-});

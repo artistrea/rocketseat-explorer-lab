@@ -25,4 +25,6 @@ class Card {
 
 const card = new Card();
 
-export { card };
+const cardTypes = Object.keys(card.cardNumberRegex);
+
+export { card, cardTypes };

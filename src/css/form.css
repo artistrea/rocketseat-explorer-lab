@@ -40,13 +40,13 @@ form .flex .input-wrapper {
   flex: 1;
 }
 
-form button {
+button {
   margin-top: 1.6rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.6rem 0;
+  padding: 1.6rem 2em;
 
   background: #42d3ff;
   border-radius: 0.6rem;
@@ -63,6 +63,6 @@ form button {
   transition: filter 0.3s;
 }
 
-form button:hover {
+button:hover {
   filter: brightness(1.1);
 }
