@@ -5,21 +5,6 @@ const myCardsModalOpenButtons = document.querySelectorAll(
 );
 const myCardsModal = document.querySelector("#my-cards-modal");
 
-const cards = [
-  {
-    number: "1233 5678 9012 3456",
-    holder: "Fulano da Silva",
-    expiration: "12/32",
-    securityCode: "123",
-  },
-  {
-    number: "2222 2222 2222 2222",
-    holder: "Fulano da Silva",
-    expiration: "12/32",
-    securityCode: "123",
-  },
-];
-
 const toggleMyCardsModal = () => {
   console.log("toggleMyCardsModal");
   if (myCardsModal.attributes["open"]) {
@@ -42,7 +27,9 @@ const myCardsModalOpenButton = document.querySelector(
 const myCardsModalContent = document.querySelector(".my-cards-modal__content");
 const origCC = document.querySelector(".cc");
 
-myCardsModalOpenButton.addEventListener("click", () => {
+myCardsModalOpenButton.addEventListener("click", async () => {
+  const cards = await fetch("/api/card/index").then((res) => res.json());
+
   myCardsModalContent.innerHTML = "";
 
   cards.forEach((cc) => {
