@@ -79,12 +79,16 @@ form.onsubmit = (e) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  card.create(data).then(async (res) => {
-    const data = await res.json();
-    if (res.status === 200) {
-      alert("Cartão cadastrado com sucesso!");
-    } else {
-      alert("Erro ao cadastrar cartão! " + JSON.stringify(data));
-    }
-  });
+  alert(
+    "O cartão não pôde ser criado pois tem gente se aproveitando pra escrever bosta nos cartões."
+  );
+
+  // card.create(data).then(async (res) => {
+  //   const data = await res.json();
+  //   if (res.status === 200) {
+  //     alert("Cartão cadastrado com sucesso!");
+  //   } else {
+  //     alert("Erro ao cadastrar cartão! " + JSON.stringify(data));
+  //   }
+  // });
 };
